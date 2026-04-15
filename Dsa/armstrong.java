@@ -8,13 +8,15 @@ public class armstrong {
         int count=0;
         int temp =0;
         int original=number;
+        int n = number
         while (number != 0) {
             count++;
             number = number/10;
         }
-        while(number != 0){
-            temp += number % 10 ^ count; 
-            number = number / 10;
+        while(n!= 0){
+            int digit = n % 10;
+            temp += Math.pow(digit, count); 
+            n = n / 10;
         }
         if (temp == original) {
             System.out.println("Armstrong Number");
